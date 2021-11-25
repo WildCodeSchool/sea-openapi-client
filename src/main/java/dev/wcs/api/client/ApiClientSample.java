@@ -14,5 +14,12 @@ public class ApiClientSample {
         BookControllerApi bookControllerApi = new BookControllerApi(apiClient);
         List<Book> books = bookControllerApi.indexUsingGET();
         System.out.println(books);
+        Book book = new Book();
+        book.setAuthor("new author");
+        book.setTitle("new title");
+        book.setDescription("new descr");
+        bookControllerApi.createUsingPOST(book);
+        books = bookControllerApi.indexUsingGET();
+        System.out.println(books);
     }
 }
