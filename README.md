@@ -9,8 +9,11 @@ This Maven project generates native Java REST client stubs from a provided YAML 
 
 ### Setup
 
-Start `mvn clean install`, afterwards all API client classes are generated in `target\openapi`
+* IDE: Import repo, Run Maven `clean install`.
+* No IDE: Start `mvn clean install`, afterwards all API client classes are generated in `target\openapi`, add those to classpath.  
 
 ### Run
 
-To run this project, the [REST server part](https://github.com/WildCodeSchool/sea_openapi_server) must be running locally on port 8080. 
+_Note: To run this project, the [REST server part](https://github.com/WildCodeSchool/sea_openapi_server) must be running locally on port 8080._
+
+* Start `ApiClientSample`
