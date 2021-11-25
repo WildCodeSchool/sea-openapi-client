@@ -14,6 +14,6 @@ This Maven project generates native Java REST client stubs from a provided YAML 
 
 ### Run
 
-_Note: To run this project, the [REST server part](https://github.com/WildCodeSchool/sea_openapi_server) must be running locally on port 8080._
+_Note: To run this project, the [REST server part](https://github.com/WildCodeSchool/sea-openapi-server) must be running locally on port 8080._
 
 * Start `ApiClientSample`
