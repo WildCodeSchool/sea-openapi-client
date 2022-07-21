@@ -10,23 +10,24 @@ import java.util.List;
 public class ApiClientSample {
 
     public static void main(String[] args) throws ApiException {
+
         ApiClient apiClient = new ApiClient();
         BookControllerApi bookControllerApi = new BookControllerApi(apiClient);
 
         // Get all Books
-        List<Book> books = bookControllerApi.indexUsingGET();
-        System.out.println(books);
+        List<Book> books = bookControllerApi.index();
+        System.out.println("Get all: " + books);
 
         // New Book to be created
         Book book = new Book();
-        book.setAuthor("new author");
-        book.setTitle("new title");
-        book.setDescription("new descr");
+        book.setAuthor("Wells");
+        book.setTitle("1984");
+        book.setDescription("Good Book");
         // Post/Create new Book
-        bookControllerApi.createUsingPOST(book);
+        bookControllerApi.create(book);
 
         // Get all Books again
-        books = bookControllerApi.indexUsingGET();
-        System.out.println(books);
+        books = bookControllerApi.index();
+        System.out.println("Get all after POST: " + books);
     }
 }
